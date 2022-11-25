@@ -10,7 +10,7 @@ module aluctrl #(
     output logic [DATA_WIDTH-1:0] ALUout,
     output eq
 )
-
+//yolo
 always_comb begin
     case (ALUctrl)
          1 b'0:
