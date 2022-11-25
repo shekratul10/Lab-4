@@ -8,7 +8,7 @@ module alusrc #(
     output logic [WIDTH-1:0] ALUop2
 );
 
-assign ALUOp2 = ALUsrc ? ImmOp : regOp2;
+assign ALUop2 = ALUsrc ? ImmOp : regOp2;
 
 endmodule 
 
