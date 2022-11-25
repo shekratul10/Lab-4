@@ -33,7 +33,7 @@ alusrc alusrc (
     .regOp2 (regOp2),
     .ImmOp (ImmOp),
     .ALUsrc (ALUsrc),
-    .ALUop2 (ALUop2),
+    .ALUop2 (ALUop2)
 );
 
 aluctrl alu (
