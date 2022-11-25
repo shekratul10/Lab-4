@@ -11,7 +11,7 @@ module datamemory #( //So this should be basically RAM?
     
 logic [DATA_WIDTH-1:0] datamem_array [2**ADDRESS_WIDTH-1:0]; //Again this feel way too large for the memory size but I will keep it
 
-always_ff @ (posedge clk) begin //is this negedge or posedge, we write on negedge to read posedge right?
+    always_ff @ (posedge clk) begin //is this negedge or posedge, we write on posedge right?
     if(we == 1'b1) //I think just if(we) is enough 
         datamem_array[a] <= wd;
 end
