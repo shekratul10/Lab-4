@@ -28,13 +28,11 @@ always_comb
             default: ;
             endcase
             7'd99:case (instr[14:12])
-                3'b001: if (!EQ) begin
-                    ALUctrl = 3'b111; 
-                    ALUsrc  = 1'b0; 
-                    ImmSrc  = 2'b11; 
+                3'b001: if (!EQ) begin 
                     PCsrc   = 1'b1; 
-                end else begin
+                end else begin 
                     ALUsrc  = 1'b0; 
+                    ImmSrc  = 2'b11;
                 end
             default: ;
             endcase
