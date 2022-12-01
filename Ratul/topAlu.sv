@@ -5,7 +5,11 @@ module topAlu #(
             
 )(
     input logic clk,
+<<<<<<< HEAD
     input logic [DATA_WIDTH-1:0] Immop,
+=======
+    input logic [DATA_WIDTH-1:0] ImmOp,
+>>>>>>> 0110eeb (fixed ALU comb loop 01/11/2022)
     input logic RegWrite,
     input logic ALUsrc,
     input logic [2:0] ALUctrl,
@@ -13,7 +17,11 @@ module topAlu #(
     input logic [ADDRESS_WIDTH-1:0] addr2,
     input logic [ADDRESS_WIDTH-1:0] addr3,
     output logic [DATA_WIDTH-1:0] a0,
+<<<<<<< HEAD
     output logic eq
+=======
+    output logic EQ
+>>>>>>> 0110eeb (fixed ALU comb loop 01/11/2022)
 );
 
 logic [DATA_WIDTH-1:0] ALUop1;
@@ -33,14 +41,22 @@ regfile alu_reg (
     .a0 (a0)
 );
 
+<<<<<<< HEAD
 assign ALUop2 = ALUsrc ? Immop : regOp2;
+=======
+assign ALUop2 = ALUsrc ? ImmOp : regOp2;
+>>>>>>> 0110eeb (fixed ALU comb loop 01/11/2022)
 
 aluctrl alu (
     .ALUop1 (ALUop1),
     .ALUop2 (ALUop2),
     .ALUctrl (ALUctrl),
     .ALUout(ALUout),
+<<<<<<< HEAD
     .eq (eq)
+=======
+    .EQ (EQ)
+>>>>>>> 0110eeb (fixed ALU comb loop 01/11/2022)
 );
 
 endmodule

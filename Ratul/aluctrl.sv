@@ -8,11 +8,19 @@ module aluctrl #(
     input logic [DATA_WIDTH-1:0] ALUop2,
     input logic [2:0] ALUctrl,
     output logic [DATA_WIDTH-1:0] ALUout,
+<<<<<<< HEAD
     output logic eq
 );
 
 always_comb begin
     eq = (ALUop1 == ALUop2);
+=======
+    output logic EQ
+);
+
+always_comb begin
+    EQ = (ALUop1 == ALUop2);
+>>>>>>> 0110eeb (fixed ALU comb loop 01/11/2022)
         case (ALUctrl)
             3'b000:    ALUout = ALUop1 + ALUop2;
             3'b001:    ALUout = ALUop1 - ALUop2;

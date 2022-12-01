@@ -19,9 +19,15 @@ int main(int argc, char **argv, char **env) {
   risc_v->trace (tfp, 99);
   tfp->open ("RISC_V.vcd");
 
+<<<<<<< HEAD
   if (vbdOpen()!=1) return(-1);
   vbdHeader("RISC_V Test"); // My branch :)
   vbdSetMode(0);
+=======
+  // if (vbdOpen()!=1) return(-1);
+  // vbdHeader("RISC_V Test"); // My branch :)
+  // vbdSetMode(0);
+>>>>>>> 0110eeb (fixed ALU comb loop 01/11/2022)
  
  
   risc_v->clk = 1;
@@ -35,6 +41,7 @@ int main(int argc, char **argv, char **env) {
       risc_v->clk = !risc_v->clk;
       risc_v->eval ();
     }
+<<<<<<< HEAD
 
     vbdCycle(simcyc);
 
@@ -42,12 +49,26 @@ int main(int argc, char **argv, char **env) {
     vbdHex(1, int(risc_v->a0) & 0xF);
     vbdHex(2, int(risc_v->a0) >> 4 & 0xF);
     vbdHex(3, int(risc_v->a0) >> 8 & 0xF);
+=======
+    std::cout << "ao: " << risc_v->a0 << std::endl;
+
+    // vbdCycle(simcyc);
+
+
+    // vbdHex(1, int(risc_v->a0) & 0xF);
+    // vbdHex(2, int(risc_v->a0) >> 4 & 0xF);
+    // vbdHex(3, int(risc_v->a0) >> 8 & 0xF);
+>>>>>>> 0110eeb (fixed ALU comb loop 01/11/2022)
     
     if ((Verilated::gotFinish())) 
       exit(0);
   }
 
+<<<<<<< HEAD
   vbdClose();
+=======
+  // vbdClose();
+>>>>>>> 0110eeb (fixed ALU comb loop 01/11/2022)
   tfp->close(); 
   printf("Exiting\n");
   exit(0);

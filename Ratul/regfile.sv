@@ -14,11 +14,19 @@ module regfile #(
     output logic [DATA_WIDTH-1:0] a0 //outputs data stored in a0 reg
 );
 
+<<<<<<< HEAD
 logic [DATA_WIDTH-1:0] regfile_array [2**ADDRESS_WIDTH-1:0];
 
 initial 
     for (int i=0; i< $size(regfile_array); i++)
         regfile_array[i] = 32'b0;
+=======
+logic [DATA_WIDTH-1:0] regfile_array [2**ADDRESS_WIDTH-1:0];//32x32 array
+
+initial 
+    for (int i=0; i< $size(regfile_array); i++)
+        regfile_array[i] = 32'b0; //may be unescessary
+>>>>>>> 0110eeb (fixed ALU comb loop 01/11/2022)
 
 always_comb begin
     a0 =  regfile_array[10];
